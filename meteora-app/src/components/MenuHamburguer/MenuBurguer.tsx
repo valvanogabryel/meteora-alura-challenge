@@ -16,7 +16,7 @@ export default function MenuBurguer() {
 
   const buttonVariants = {
     open: {
-      rotate: 180,
+      rotate: 90,
       scale: 1.5,
     },
     closed: {
