@@ -8,6 +8,12 @@ import { Navbar } from "./Navbar";
 export default function MenuBurguer() {
   const [isOpen, setIsOpen] = useState(false);
 
+  if (isOpen) {
+    document.body.classList.add("overflow-hidden");
+  } else {
+    document.body.classList.remove("overflow-hidden");
+  }
+
   const buttonVariants = {
     open: {
       rotate: 180,
