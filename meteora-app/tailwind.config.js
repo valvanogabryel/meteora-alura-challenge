@@ -19,13 +19,13 @@ module.exports = {
       },
       keyframes: {
         "expand-height": {
-          from: { height: "0" },
-          to: { height: "100%" },
+          from: { transform: "scale(0)" },
+          to: { transform: "scale(1)" },
         },
       },
     },
     animation: {
-      "expand-height": "expand-height 0.3s linear",
+      "expand-height": "expand-height 0.3s cubic-bezier(0.2, 0.2, 0.2, 1)",
     },
   },
   plugins: [],

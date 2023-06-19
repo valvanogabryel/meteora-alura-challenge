@@ -19,9 +19,9 @@ export default function MenuBurguer() {
   };
 
   return (
-    <div className="relative">
+    <div className="">
       <motion.button
-        className="md:hidden"
+        className="relative md:hidden"
         onClick={() => setIsOpen(!isOpen)}
         variants={buttonVariants}
         initial="closed"
@@ -34,7 +34,7 @@ export default function MenuBurguer() {
         }}
       >
         {isOpen ? (
-          <OpenedMenuBurguer className="text-meteora-lime-yellow scale-150" />
+          <OpenedMenuBurguer className="text-meteora-lime-yellow scale-150 relative z-50" />
         ) : (
           <ClosedMenuBurguer className="text-meteora-lime-yellow scale-150" />
         )}

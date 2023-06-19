@@ -5,10 +5,14 @@ export function Navbar() {
   const isActive = true;
 
   return (
-    <motion.nav className="bg-meteora-darker-gray animate-expand-height z-50 absolute -left-40 transition-all duration-300">
-      <ul>
+    <motion.nav
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.3 }}
+      className="bg-meteora-darker-gray animate-expand-height absolute right-0 top-0 transition-all duration-300"
+    >
+      <ul className="p-8 -z-50">
         <motion.li
-          className={`border-b-2 border-[#CED4DA] p-4 ${
+          className={`py-2 border-b-2 border-[#CED4DA] ${
             isActive && "text-meteora-lime-yellow font-bold"
           }`}
           initial={{ opacity: 0, scale: 0.5 }}
@@ -18,10 +22,10 @@ export function Navbar() {
             ease: [0, 0.71, 0.2, 1.01],
           }}
         >
-          home
+          <a href="/">Home</a>
         </motion.li>
         <motion.li
-          className="border-b-2 border-[#CED4DA] p-4"
+          className="py-2 border-b-2 border-[#CED4DA]"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -30,10 +34,10 @@ export function Navbar() {
             ease: [0, 0.71, 0.2, 1.01],
           }}
         >
-          home
+          <a href="/">Nossas lojas</a>
         </motion.li>
         <motion.li
-          className="border-b-2 border-[#CED4DA] p-4"
+          className="py-2 border-b-2 border-[#CED4DA]"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -42,10 +46,10 @@ export function Navbar() {
             ease: [0, 0.71, 0.2, 1.01],
           }}
         >
-          home
+          <a href="/">Novidades</a>
         </motion.li>
         <motion.li
-          className="p-4"
+          className="py-2"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -54,7 +58,7 @@ export function Navbar() {
             ease: [0, 0.71, 0.2, 1.01],
           }}
         >
-          home
+          <a href="/">Promoções</a>
         </motion.li>
       </ul>
     </motion.nav>
