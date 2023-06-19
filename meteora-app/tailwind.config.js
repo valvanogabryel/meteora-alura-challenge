@@ -13,6 +13,9 @@ module.exports = {
         "meteora-lime-yellow": "#DAFF01",
         "meteora-light-purple": "#9353FF",
       },
+      fontSize: {
+        "xs+1": "13px",
+      },
     },
   },
   plugins: [],
