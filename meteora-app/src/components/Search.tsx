@@ -15,7 +15,7 @@ export function Search() {
           placeholder="Digite o produto"
           className="text-xs+1 border border-black pl-4 focus:outline-none placeholder:text-meteora-dark-gray md:w-36 lg:placeholder:text-[15px] lg:w-44"
         />
-        <button className="border border-black font-medium px-4 py-2 md:text-white md:border-white md:text-xs+1 lg:text-base">
+        <button className="border border-black font-medium px-4 py-2 md:text-white md:border-white md:text-xs+1 lg:text-base transition-colors hover:bg-black hover:text-white md:hover:bg-white md:hover:text-black md:duration-300">
           Search
         </button>
       </form>
