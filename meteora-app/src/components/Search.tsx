@@ -4,7 +4,7 @@ export function Search() {
   return (
     <div>
       <form
-        className="flex gap-2 w-full px-4 py-8 justify-center md:gap-4 md:p-0 md:pr-6"
+        className="flex gap-2 w-full px-4 py-8 justify-center md:gap-4 md:p-0 md:pr-6 flex-wrap"
         onSubmit={(e) => {
           e.preventDefault();
           console.log("pesquisando...");
