@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FiMenu as ClosedMenuBurguer } from "react-icons/fi";
@@ -19,9 +20,9 @@ export default function MenuBurguer() {
   };
 
   return (
-    <div className="">
+    <div>
       <motion.button
-        className="relative md:hidden"
+        className="relative z-50 md:hidden"
         onClick={() => setIsOpen(!isOpen)}
         variants={buttonVariants}
         initial="closed"
@@ -34,7 +35,7 @@ export default function MenuBurguer() {
         }}
       >
         {isOpen ? (
-          <OpenedMenuBurguer className="text-meteora-lime-yellow scale-150 relative z-50" />
+          <OpenedMenuBurguer className="text-meteora-lime-yellow scale-150 sticky z-50" />
         ) : (
           <ClosedMenuBurguer className="text-meteora-lime-yellow scale-150" />
         )}

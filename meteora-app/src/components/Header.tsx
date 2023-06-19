@@ -13,16 +13,16 @@ export function Header() {
         {/* Only for tablets and desktop  */}
         <nav className="hidden md:inline-block">
           <ul className="flex gap-6 items-center text-xs+1">
-            <li>
+            <li className="hover:underline">
               <a href="/">Home</a>
             </li>
-            <li>
+            <li className="hover:underline">
               <a href="/">Nossas lojas</a>
             </li>
-            <li>
+            <li className="hover:underline">
               <a href="/">Novidades</a>
             </li>
-            <li>
+            <li className="hover:underline">
               <a href="/">Promoções</a>
             </li>
           </ul>
