@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         "meteora-gray": "#CCCCCC",
+        "meteora-dark-gray": "#6C757D",
         "meteora-lime-yellow": "#DAFF01",
         "meteora-light-purple": "#9353FF",
       },
