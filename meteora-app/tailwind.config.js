@@ -28,5 +28,13 @@ module.exports = {
       "expand-height": "expand-height 0.3s cubic-bezier(0.2, 0.2, 0.2, 1)",
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".overflow-hidden": {
+          overflow: "hidden",
+        },
+      });
+    },
+  ],
 };

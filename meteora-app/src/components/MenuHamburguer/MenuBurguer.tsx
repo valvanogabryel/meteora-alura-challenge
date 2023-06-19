@@ -1,18 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiMenu as ClosedMenuBurguer } from "react-icons/fi";
 import { RiCloseLine as OpenedMenuBurguer } from "react-icons/ri";
 import { Navbar } from "./Navbar";
 export default function MenuBurguer() {
   const [isOpen, setIsOpen] = useState(false);
 
-  if (typeof document !== "undefined" && isOpen) {
-    document.body.classList.add("overflow-hidden");
-  } else {
-    document.body.classList.remove("overflow-hidden");
-  }
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isOpen]);
 
   const buttonVariants = {
     open: {
