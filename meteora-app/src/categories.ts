@@ -1,11 +1,11 @@
 const categories = [
   {
     name: "Camisetas",
-    img: "./assets//Categorias/Categoria camiseta.png",
+    image: "./assets/Categorias/Categoria camiseta.png",
   },
   {
     name: "Bolsas",
-    img: "./assets//Categorias/Categoria Bolsas.png",
+    image: "./assets/Categorias/Categoria Bolsas.png",
   },
 ];
 
