@@ -13,9 +13,11 @@ module.exports = {
         "meteora-darker-gray": "#343A40",
         "meteora-lime-yellow": "#DAFF01",
         "meteora-light-purple": "#9353FF",
+        "meteora-dark": "#212529",
       },
       fontSize: {
         "xs+1": "13px",
+        "3xl": "28px",
       },
       keyframes: {
         "expand-height": {
