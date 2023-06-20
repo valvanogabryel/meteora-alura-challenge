@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export function CategoryCard({
@@ -9,7 +10,7 @@ export function CategoryCard({
   };
 }) {
   return (
-    <div className="relative group cursor-pointer">
+    <motion.div className="relative group cursor-pointer">
       <div className="bg-meteora-lime-yellow">
         <Image
           src={category.image}
@@ -24,6 +25,6 @@ export function CategoryCard({
           {category.name}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
