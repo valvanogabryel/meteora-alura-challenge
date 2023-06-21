@@ -16,7 +16,7 @@ export function SignIn() {
             placeholder="Digite seu email"
             className="text-meteora-dark-gray border border-black pl-4 py-2 col-span-7"
           />
-          <PurpleButton width="30">Enviar</PurpleButton>
+          <PurpleButton>Enviar</PurpleButton>
         </form>
       </div>
     </section>

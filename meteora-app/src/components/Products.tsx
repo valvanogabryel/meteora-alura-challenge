@@ -38,7 +38,7 @@ export function Products() {
               <span className="font-bold mb-3">
                 R$ {product.price.toFixed(2)}
               </span>
-              <PurpleButton width="40">Ver mais</PurpleButton>
+              <PurpleButton width="w-[40%]">Ver mais</PurpleButton>
             </div>
           </div>
         ))}
