@@ -2,6 +2,7 @@ import Image from "next/image";
 import { SectionTitle } from "./SectionTitle";
 import { PurpleButton } from "./PurpleButton";
 
+
 const products = [
   {
     id: 1,
