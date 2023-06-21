@@ -12,10 +12,10 @@ export default function Home() {
       <Header />
       <Banner />
       <Categories />
+      {/* !TODO: Products */}
       <Products />
       <Facilities />
       <SignIn />
-
       <Footer />
     </>
   );

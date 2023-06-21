@@ -33,8 +33,8 @@ module.exports = {
   plugins: [
     function ({ addUtilities }) {
       addUtilities({
-        ".overflow-hidden": {
-          overflow: "hidden",
+        ".overflow-y-hidden": {
+          overflowY: "hidden",
         },
       });
     },

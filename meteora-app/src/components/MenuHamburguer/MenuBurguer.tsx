@@ -10,9 +10,11 @@ export default function MenuBurguer() {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add("overflow-hidden");
+      // document.body.classList.add("!overflow-hidden");
+      document.body.style.overflowY = "hidden";
     } else {
-      document.body.classList.remove("overflow-hidden");
+      // document.body.classList.remove("!overflow-hidden");
+      document.body.style.overflowY = "auto";
     }
   }, [isOpen]);
 
