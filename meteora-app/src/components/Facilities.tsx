@@ -1,7 +1,7 @@
 import Image from "next/image";
-import pix from "@/assets/mobile/Ícones/x-diamond.png";
-import arrowRepeat from "@/assets/mobile/Ícones/arrow-repeat.png";
-import flower from "@/assets/mobile/Ícones/flower1.png";
+import pix from "@/assets/facilities/Union.svg";
+import arrowRepeat from "@/assets/facilities/Vector.svg";
+import flower from "@/assets/facilities/Subtract.svg";
 
 export function Facilities() {
   return (
@@ -14,8 +14,8 @@ export function Facilities() {
         <div>
           <ul>
             <li className="flex items-center gap-6 mt-8">
-              <div>
-                <Image src={pix} alt="" className="" width={56} height={56} />
+              <div className="h-[56px] w-[56px]">
+                <Image src={pix} alt="" className="" />
               </div>
               <div>
                 <h4 className="font-bold text-meteora-lime-yellow uppercase mb-4">
@@ -31,14 +31,8 @@ export function Facilities() {
         <div>
           <ul>
             <li className="flex items-center gap-6 mt-8">
-              <div>
-                <Image
-                  src={arrowRepeat}
-                  alt=""
-                  className=""
-                  width={54.02}
-                  height={42}
-                />
+              <div className="h-[56px] w-[56px]">
+                <Image src={arrowRepeat} alt="" className="" />
               </div>
               <div>
                 <h4 className="font-bold text-meteora-lime-yellow uppercase mb-4">
@@ -54,14 +48,8 @@ export function Facilities() {
         <div>
           <ul>
             <li className="flex items-center gap-6 mt-8">
-              <div>
-                <Image
-                  src={flower}
-                  alt=""
-                  className=""
-                  width={70}
-                  height={70}
-                />
+              <div className="h-[56px] w-[56px]">
+                <Image src={flower} alt="" className="" />
               </div>
               <div>
                 <h4 className="font-bold text-meteora-lime-yellow uppercase mb-4">

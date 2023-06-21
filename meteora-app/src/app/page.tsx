@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Banner } from "@/components/Banner";
 import { Categories } from "@/components/Categories";
+import { Products } from "@/components/Products";
 import { Facilities } from "@/components/Facilities";
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
       <Header />
       <Banner />
       <Categories />
-      {/* <Products/> */}
+      <Products />
       <Facilities />
     </>
   );
