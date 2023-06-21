@@ -11,9 +11,10 @@ export default function Home() {
     <>
       <Header />
       <Banner />
-      <Categories />
-      {/* !TODO: Products */}
-      <Products />
+      <main className="container m-auto">
+        <Categories />
+        <Products />
+      </main>
       <Facilities />
       <SignIn />
       <Footer />

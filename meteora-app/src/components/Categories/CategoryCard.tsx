@@ -22,7 +22,7 @@ export function CategoryCard({
           height={3000}
         />
       </div>
-      <div className="bg-black text-white px-4 py-2">
+      <div className="bg-black text-white px-4 py-2 lg:py-1.5 lg:px-2">
         <p className="font-medium text-center duration-300 lg:group-hover:scale-105">
           {category.name}
         </p>
