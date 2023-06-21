@@ -12,7 +12,7 @@ export function CategoryCard({
   };
 }) {
   return (
-    <motion.div className="relative group cursor-pointer">
+    <motion.div className="relative group cursor-pointer -mt-3 md:-mt-2 lg:mt-0">
       <div className="bg-meteora-lime-yellow">
         <Image
           src={category.image}
