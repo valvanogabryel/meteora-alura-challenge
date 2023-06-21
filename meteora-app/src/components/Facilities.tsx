@@ -14,8 +14,8 @@ export function Facilities() {
         <div>
           <ul>
             <li className="flex items-center gap-6 mt-8">
-              <div className="h-[56px] w-[56px]">
-                <Image src={pix} alt="" className="" />
+              <div>
+                <Image src={pix} alt="" className="min-w-[56px]" />
               </div>
               <div>
                 <h4 className="font-bold text-meteora-lime-yellow uppercase mb-4">
@@ -31,8 +31,8 @@ export function Facilities() {
         <div>
           <ul>
             <li className="flex items-center gap-6 mt-8">
-              <div className="h-[56px] w-[56px]">
-                <Image src={arrowRepeat} alt="" className="" />
+              <div className="">
+                <Image src={arrowRepeat} alt="" className="min-w-[56px]" />
               </div>
               <div>
                 <h4 className="font-bold text-meteora-lime-yellow uppercase mb-4">
@@ -48,8 +48,8 @@ export function Facilities() {
         <div>
           <ul>
             <li className="flex items-center gap-6 mt-8">
-              <div className="h-[56px] w-[56px]">
-                <Image src={flower} alt="" className="" />
+              <div className="">
+                <Image src={flower} alt="" className="min-w-[56px]" />
               </div>
               <div>
                 <h4 className="font-bold text-meteora-lime-yellow uppercase mb-4">
