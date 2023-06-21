@@ -21,14 +21,14 @@ module.exports = {
         "3xl": "28px",
       },
       keyframes: {
-        "expand-height": {
-          from: { transform: "scale(0)" },
-          to: { transform: "scale(1)" },
+        expand: {
+          from: { transform: "scale(0)", opacity: "0" },
+          to: { transform: "scale(1)", opacity: "1" },
         },
       },
     },
     animation: {
-      "expand-height": "expand-height 0.3s cubic-bezier(0.2, 0.2, 0.2, 1)",
+      expand: "expand 0.3s cubic-bezier(0.2, 0.2, 0.2, 1)",
     },
   },
   plugins: [
