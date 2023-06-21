@@ -2,7 +2,6 @@ import Image from "next/image";
 import { SectionTitle } from "./SectionTitle";
 import { PurpleButton } from "./PurpleButton";
 
-
 const products = [
   {
     id: 1,
@@ -39,7 +38,7 @@ export function Products() {
               <span className="font-bold mb-3">
                 R$ {product.price.toFixed(2)}
               </span>
-              <PurpleButton width={40}>Ver mais</PurpleButton>
+              <PurpleButton width="40">Ver mais</PurpleButton>
             </div>
           </div>
         ))}

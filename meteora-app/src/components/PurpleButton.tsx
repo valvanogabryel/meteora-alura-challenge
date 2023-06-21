@@ -5,7 +5,7 @@ export function PurpleButton({
   width,
 }: {
   children: ReactNode;
-  width?: number;
+  width?: string;
 }) {
   const widthClass = width ? `w-[${width}%]` : "";
 
