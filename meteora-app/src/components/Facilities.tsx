@@ -12,7 +12,7 @@ export function Facilities() {
 
       <div className="lg:flex xl:gap-8 xl:justify-center xl:w-4/6">
         <div className="xl:max-w-[304px]">
-          <ul className="md:w-[66%] md:m-auto">
+          <ul className="md:w-[66%] md:m-auto lg:w-full">
             <li className="flex items-center gap-6 mt-8 xl:w-[19rem]">
               <div>
                 <Image
@@ -33,7 +33,7 @@ export function Facilities() {
           </ul>
         </div>
         <div className="xl:max-w-[304px]">
-          <ul className="md:w-[66%] m-auto">
+          <ul className="md:w-[66%] m-auto lg:w-full">
             <li className="flex items-center gap-6 mt-8 xl:w-[19rem]">
               <div>
                 <Image
@@ -54,7 +54,7 @@ export function Facilities() {
           </ul>
         </div>
         <div>
-          <ul className="md:w-[66%] md:m-auto">
+          <ul className="md:w-[66%] md:m-auto lg:w-full">
             <li className="flex items-center gap-6 mt-8 xl:w-[19rem]">
               <div className="">
                 <Image

@@ -8,7 +8,7 @@ export function Products() {
     <section className="mt-10">
       <SectionTitle>Produtos que estão bombando!</SectionTitle>
       {/* cards grid */}
-      <div className="flex flex-col items-center -mt-2 sm:grid sm:grid-cols-2 sm:justify-items-center lg:grid-cols-3 xl:max-w-[90%] xl:mx-auto">
+      <div className="flex flex-col items-center -mt-2 sm:grid sm:grid-cols-2 sm:justify-items-center lg:grid-cols-3 xl:max-w-[90%] xl:mx-auto 2xl:max-w-[75%]">
         {/* cards */}
         {products.map((product) => (
           <div
@@ -36,7 +36,7 @@ export function Products() {
                   currency: "BRL",
                 })}
               </span>
-              <PurpleButton className="w-[40%] lg:w-[45%] xl:w-[32%]">
+              <PurpleButton className="w-[40%] sm:w-[50%] md:w-[35%] lg:w-[50%] xl:w-[35%] 2xl:w-[35%]">
                 Ver mais
               </PurpleButton>
             </div>
