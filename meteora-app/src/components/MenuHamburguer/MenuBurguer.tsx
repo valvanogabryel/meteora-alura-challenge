@@ -8,15 +8,15 @@ import { Navbar } from "./Navbar";
 export default function MenuBurguer() {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    if (isOpen) {
-      // document.body.classList.add("!overflow-hidden");
-      document.body.style.overflowY = "hidden";
-    } else {
-      // document.body.classList.remove("!overflow-hidden");
-      document.body.style.overflowY = "auto";
-    }
-  }, [isOpen]);
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     document.body.classList.add("!overflow-hidden");
+  //     document.body.style.overflowY = "hidden";
+  //   } else {
+  //      document.body.classList.remove("!overflow-hidden");
+  //     document.body.style.overflowY = "auto";
+  //   }
+  // }, [isOpen]);
 
   const buttonVariants = {
     open: {
@@ -40,8 +40,8 @@ export default function MenuBurguer() {
         animate={isOpen ? "open" : "closed"}
         transition={{
           type: "spring",
-          stiffness: 1000,
-          damping: 50,
+          stiffness: 500,
+          damping: 20,
         }}
       >
         {isOpen ? (
