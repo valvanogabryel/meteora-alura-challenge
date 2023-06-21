@@ -23,7 +23,7 @@ export function CategoryCard({
         />
       </div>
       <div className="bg-black text-white px-4 py-2">
-        <p className="font-medium text-center duration-300 group-hover:scale-105">
+        <p className="font-medium text-center duration-300 lg:group-hover:scale-105">
           {category.name}
         </p>
       </div>
