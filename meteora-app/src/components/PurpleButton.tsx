@@ -7,13 +7,11 @@ export function PurpleButton({
   children: ReactNode;
   width?: number;
 }) {
-  const widthValue = width;
+  const widthClass = width ? `w-[${width}%]` : "";
 
   return (
     <button
-      className={`bg-meteora-light-purple text-white font-medium py-2 transition-all duration-300 pr-4 pl-[18px] col-span-3 hover:bg-[#8960B4] ${
-        widthValue && `w-[${widthValue}%]`
-      }`}
+      className={`bg-meteora-light-purple text-white font-medium py-2 transition-all duration-300 pr-4 pl-[18px] col-span-3 hover:bg-[#8960B4] ${widthClass}`}
     >
       {children}
     </button>
