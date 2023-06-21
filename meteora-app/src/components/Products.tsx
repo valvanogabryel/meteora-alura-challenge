@@ -8,15 +8,18 @@ export function Products() {
     <section className="mt-10">
       <SectionTitle>Produtos que estão bombando!</SectionTitle>
       {/* cards grid */}
-      <div className="flex flex-col items-center -mt-2 sm:grid sm:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-col items-center -mt-2 sm:grid sm:grid-cols-2 sm:justify-items-center lg:grid-cols-3">
         {/* cards */}
         {products.map((product) => (
-          <div key={product.id} className="m-8 border max-w-xs">
+          <div
+            key={product.id}
+            className="m-8 border max-w-xs md:w-11/12 md:max-w-none lg:w-4/5"
+          >
             <div className="">
               <Image
                 src={product.image}
                 alt="placeholder"
-                className=""
+                className="w-full"
                 width={330}
                 height={389}
               />
