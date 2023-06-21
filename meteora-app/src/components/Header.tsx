@@ -12,7 +12,7 @@ export function Header() {
 
         {/* Only for tablets and desktop  */}
         <nav className="hidden md:inline-block">
-          <ul className="flex gap-6 items-center text-xs+1 lg:text-base">
+          <ul className="flex gap-6 items-center text-xs+1 lg:text-base lg:gap-10">
             <li className="hover:underline">
               <a href="/">Home</a>
             </li>

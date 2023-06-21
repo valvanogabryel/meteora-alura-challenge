@@ -5,7 +5,7 @@ import flower from "@/assets/facilities/Subtract.svg";
 
 export function Facilities() {
   return (
-    <section className="flex flex-col items-center bg-black text-white p-8 my-10 xl:py-10">
+    <section className="flex flex-col items-center cursor-default bg-black text-white p-8 my-10 xl:py-10">
       <p className="font-medium text-2xl text-center md:text-3xl lg:text-[2rem] xl:mb-3">
         Conheça todas as nossas facilidades
       </p>
