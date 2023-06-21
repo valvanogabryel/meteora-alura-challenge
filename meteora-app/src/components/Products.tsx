@@ -24,7 +24,7 @@ export function Products() {
 
             <div className="flex flex-col justify-start text-meteora-dark p-4">
               <h5 className="font-bold -mt-1 mb-4">{product.name}</h5>
-              <p className="text-xs+1 mb-4 overflow-auto max-h-[39px]">
+              <p className="text-xs+1 mb-4 sm:overflow-auto sm:max-h-[39px]">
                 {product.description}
               </p>
               <span className="font-bold mb-3">
