@@ -10,6 +10,14 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  @apply w-1;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-meteora-darker-gray rounded-xl;
+}
+
 input,
 textarea,
 button,

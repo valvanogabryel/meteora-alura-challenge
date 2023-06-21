@@ -1,17 +1,7 @@
 import Image from "next/image";
 import { SectionTitle } from "./SectionTitle";
 import { PurpleButton } from "./PurpleButton";
-
-const products = [
-  {
-    id: 1,
-    name: "Camiseta Conforto",
-    description:
-      "Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.",
-    price: 70.0,
-    image: "/../assets/mobile/Imagens cards/Card camiseta.png",
-  },
-];
+import products from "@/hooks/useProducts";
 
 export function Products() {
   return (
@@ -34,11 +24,16 @@ export function Products() {
 
             <div className="flex flex-col justify-start text-meteora-dark p-4">
               <h5 className="font-bold -mt-1 mb-4">{product.name}</h5>
-              <p className="text-xs+1 mb-4">{product.description}</p>
+              <p className="text-xs+1 mb-4 overflow-auto max-h-[39px]">
+                {product.description}
+              </p>
               <span className="font-bold mb-3">
-                R$ {product.price.toFixed(2)}
+                {product.price.toLocaleString("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                })}
               </span>
-              <PurpleButton width="w-[40%]">Ver mais</PurpleButton>
+              <PurpleButton className="w-[40%]">Ver mais</PurpleButton>
             </div>
           </div>
         ))}
