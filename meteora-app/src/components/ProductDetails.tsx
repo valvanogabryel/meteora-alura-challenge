@@ -144,6 +144,5 @@ export function ProductDetails({ selectedProduct, setSelectedProduct }: Props) {
     );
   }
 
-  document.documentElement.classList.remove("!overflow-hidden");
   return null;
 }

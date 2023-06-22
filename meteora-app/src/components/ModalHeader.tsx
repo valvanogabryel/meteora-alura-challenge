@@ -58,7 +58,10 @@ export function ModalHeader({ children, onClose }: ModalHeaderProps) {
       >
         <CloseIcon
           className="text-meteora-dark-gray h-6 w-6 cursor-pointer"
-          onClick={onClose}
+          onClick={() => {
+            onClose();
+            document.documentElement.classList.remove("!overflow-hidden");
+          }}
         />
       </motion.div>
     </header>
