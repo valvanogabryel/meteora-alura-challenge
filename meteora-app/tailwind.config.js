@@ -25,10 +25,15 @@ module.exports = {
           from: { transform: "scale(0)", opacity: "0" },
           to: { transform: "scale(1)", opacity: "1" },
         },
+        grow: {
+          from: { opacity: "0", padding: "0 1rem 0 1rem" },
+          to: { opacity: "1", padding: "1rem 1rem 2rem 1rem" },
+        },
       },
     },
     animation: {
       expand: "expand 0.3s cubic-bezier(0.2, 0.2, 0.2, 1)",
+      grow: "grow .3s cubic-bezier(0.2, 0.2, 0.2, 1)",
     },
   },
   plugins: [
