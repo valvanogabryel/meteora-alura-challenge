@@ -7,7 +7,7 @@ export function EmailModal() {
     (t) => (
       <div
         className={classNames(`shadow-xl select-none rounded-md`, [
-          t.visible ? "top-0" : "-top-96",
+          t.visible ? "bottom-0 left-0" : "-bottom-10 -left-10",
         ])}
       >
         <ModalHeader>E-mail cadastrado com sucesso!</ModalHeader>
@@ -18,6 +18,6 @@ export function EmailModal() {
         </main>
       </div>
     ),
-    { id: "unique-notification", position: "top-center" }
+    { id: "unique-notification", position: "bottom-left" }
   );
 }
