@@ -21,7 +21,7 @@ export function ModalHeader({ children, onClose }: ModalHeaderProps) {
   };
 
   return (
-    <header className="bg-black flex items-center px-7 py-1.5 gap-5 lg:justify-center select-none">
+    <header className="bg-black flex items-center px-7 py-1.5 gap-5 lg:justify-center select-none sticky top-0 md:static">
       <div className="flex items-center flex-1 gap-5">
         <motion.div
           transition={{
