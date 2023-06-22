@@ -18,6 +18,8 @@ export function ProductDetails({ selectedProduct, setSelectedProduct }: Props) {
   );
 
   if (currentProduct) {
+    document.documentElement.classList.add("!overflow-hidden");
+
     return (
       <motion.section
         layoutId={selectedProduct}
@@ -142,5 +144,6 @@ export function ProductDetails({ selectedProduct, setSelectedProduct }: Props) {
     );
   }
 
+  document.documentElement.classList.remove("!overflow-hidden");
   return null;
 }
