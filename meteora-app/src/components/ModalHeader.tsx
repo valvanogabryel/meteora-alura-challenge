@@ -54,10 +54,9 @@ export function ModalHeader({ children, onClose }: ModalHeaderProps) {
         variants={iconVariants}
         initial="hidden"
         animate="visible"
-        whileHover={{ scale: 1.1 }}
       >
         <CloseIcon
-          className="text-meteora-dark-gray h-6 w-6 cursor-pointer"
+          className="text-meteora-dark-gray h-6 w-6 cursor-pointer duration-200 hover:text-gray-300 hover:scale-110"
           onClick={() => {
             onClose();
             document.documentElement.classList.remove("!overflow-hidden");
