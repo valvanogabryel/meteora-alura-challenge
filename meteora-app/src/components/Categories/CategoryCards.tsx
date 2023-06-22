@@ -1,5 +1,4 @@
 "use client";
-
 import { CategoryCard } from "./CategoryCard";
 import useCategoriesImage from "@/hooks/useCategoriesImage";
 

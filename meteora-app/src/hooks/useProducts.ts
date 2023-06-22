@@ -1,3 +1,4 @@
+import IProduct from "@/types/IProduct";
 import {
   tshirtImage,
   pantsImage,
@@ -7,7 +8,7 @@ import {
   purseImage,
 } from "@/utils/cardImagesImports";
 
-const products = [
+const products: IProduct[] = [
   {
     id: 1,
     name: "Camiseta Conforto",

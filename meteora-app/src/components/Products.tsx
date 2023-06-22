@@ -1,10 +1,16 @@
 "use client";
+
 import Image from "next/image";
 import { SectionTitle } from "./SectionTitle";
 import { PurpleButton } from "./PurpleButton";
 import products from "@/hooks/useProducts";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import { ProductDetails } from "./ProductDetails";
 
 export function Products() {
+  const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
+
   return (
     <section className="mt-10">
       <SectionTitle>Produtos que estão bombando!</SectionTitle>
@@ -12,11 +18,12 @@ export function Products() {
       <div className="flex flex-col items-center -mt-2 sm:grid sm:grid-cols-2 sm:justify-items-center lg:grid-cols-3 xl:max-w-[90%] xl:mx-auto 2xl:max-w-[75%]">
         {/* cards */}
         {products.map((product) => (
-          <div
+          <motion.div
             key={product.id}
+            layoutId={product.id}
             className="m-8 border max-w-xs md:w-11/12 md:max-w-none lg:w-4/5 xl:w-[93%]"
           >
-            <div className="">
+            <motion.div>
               <Image
                 src={product.image}
                 alt="placeholder"
@@ -24,25 +31,39 @@ export function Products() {
                 width={330}
                 height={389}
               />
-            </div>
+            </motion.div>
 
             <div className="flex flex-col justify-start text-meteora-dark p-4">
-              <h5 className="font-bold -mt-1 mb-4">{product.name}</h5>
-              <p className="text-xs+1 mb-4 sm:overflow-auto sm:max-h-[39px]">
+              <motion.h5 className="font-bold -mt-1 mb-4">
+                {product.name}
+              </motion.h5>
+              <motion.p className="text-xs+1 mb-4 sm:overflow-auto sm:max-h-[39px]">
                 {product.description}
-              </p>
+              </motion.p>
               <span className="font-bold mb-3">
                 {product.price.toLocaleString("pt-BR", {
                   style: "currency",
                   currency: "BRL",
                 })}
               </span>
-              <PurpleButton className="w-[40%] sm:w-[50%] md:w-[35%] lg:w-[50%] xl:w-[35%] 2xl:w-[35%]">
+              <PurpleButton
+                className="w-[40%] sm:w-[50%] md:w-[35%] lg:w-[50%] xl:w-[35%] 2xl:w-[35%]"
+                onClick={() => setSelectedProduct(product.id)}
+              >
                 Ver mais
               </PurpleButton>
             </div>
-          </div>
+          </motion.div>
         ))}
+
+        <AnimatePresence>
+          {selectedProduct && (
+            <ProductDetails
+              selectedProduct={selectedProduct}
+              setSelectedProduct={setSelectedProduct}
+            />
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
