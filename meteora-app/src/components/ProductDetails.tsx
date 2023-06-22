@@ -27,7 +27,7 @@ export function ProductDetails({ selectedProduct, setSelectedProduct }: Props) {
       >
         <div className="bg-white shadow-xl max-h-[51rem] overflow-auto scale-90 md:scale-100 rounded-sm">
           <ModalHeader onClose={() => setSelectedProduct(null)}>
-            Confira detalhes sobre o produtos
+            Confira detalhes sobre o produto
           </ModalHeader>
           <main className="p-4 pb-8">
             <div className="border lg:border-none">

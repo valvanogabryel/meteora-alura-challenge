@@ -9,7 +9,7 @@ export function CategoryCard({
   };
 }) {
   return (
-    <div className="relative group cursor-pointer -mt-3 md:-mt-2 lg:mt-0 transition-all hover:scale-105 hover:shadow-lg">
+    <div className="relative group cursor-pointer -mt-3 md:-mt-2 lg:mt-0 transition-all hover:scale-105 hover:shadow-2xl">
       <div className="bg-meteora-lime-yellow">
         <Image
           src={category.image}
