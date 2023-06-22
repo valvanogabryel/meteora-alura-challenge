@@ -10,7 +10,7 @@ import {
 
 const products: IProduct[] = [
   {
-    id: 1,
+    id: "1",
     name: "Camiseta Conforto",
     description:
       "Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.",
@@ -18,7 +18,7 @@ const products: IProduct[] = [
     image: tshirtImage,
   },
   {
-    id: 2,
+    id: "2",
     name: "Calça Alfaiataria",
     description:
       "Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!",
@@ -26,7 +26,7 @@ const products: IProduct[] = [
     image: pantsImage,
   },
   {
-    id: 3,
+    id: "3",
     name: "Tênis Chunky",
     description:
       "Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.",
@@ -34,7 +34,7 @@ const products: IProduct[] = [
     image: tennisImage,
   },
   {
-    id: 4,
+    id: "4",
     name: "Jaqueta Jeans",
     description:
       "Modelo unissex oversized com gola de camurça. Atemporal e autêntica!",
@@ -42,7 +42,7 @@ const products: IProduct[] = [
     image: jacketImage,
   },
   {
-    id: 5,
+    id: "5",
     name: "Óculos Redondo",
     description:
       "Armação metálica em grafite com lentes arredondadas. Sem erro!",
@@ -50,7 +50,7 @@ const products: IProduct[] = [
     image: glassImage,
   },
   {
-    id: 6,
+    id: "6",
     name: "Bolsa Coringa",
     description:
       "Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!",
