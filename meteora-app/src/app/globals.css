@@ -18,10 +18,6 @@ body {
   @apply bg-meteora-darker-gray rounded-xl hover:bg-meteora-dark-gray;
 }
 
-.modal-container {
-  backdrop-filter: blur(100);
-}
-
 input,
 textarea,
 button,
