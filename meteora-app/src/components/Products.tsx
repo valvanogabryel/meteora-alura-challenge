@@ -1,12 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
+
 import { SectionTitle } from "./SectionTitle";
 import { PurpleButton } from "./PurpleButton";
-import products from "@/hooks/useProducts";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
 import { ProductDetails } from "./ProductDetails";
+
+import { AnimatePresence, motion } from "framer-motion";
+
+import products from "@/hooks/useProducts";
 
 export function Products() {
   const [selectedProduct, setSelectedProduct] = useState<string | null>(null);

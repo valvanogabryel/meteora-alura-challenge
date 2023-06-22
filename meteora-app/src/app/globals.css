@@ -19,7 +19,7 @@ body {
 }
 
 .modal-container {
-  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(100);
 }
 
 input,

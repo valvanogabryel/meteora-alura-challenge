@@ -22,26 +22,28 @@ export function ModalHeader({ children, onClose }: ModalHeaderProps) {
 
   return (
     <header className="bg-black flex items-center px-7 py-1.5 gap-5 lg:justify-center">
-      <motion.div
-        transition={{
-          type: "spring",
-          stiffness: 500,
-          damping: 20,
-        }}
-        variants={iconVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <CheckCircle className="text-meteora-lime-yellow h-10 w-10" />
-      </motion.div>
-      <motion.p
-        className="text-xl text-white font-medium"
-        variants={textVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {children}
-      </motion.p>
+      <div className="flex items-center flex-1 gap-5">
+        <motion.div
+          transition={{
+            type: "spring",
+            stiffness: 500,
+            damping: 20,
+          }}
+          variants={iconVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <CheckCircle className="text-meteora-lime-yellow h-10 w-10" />
+        </motion.div>
+        <motion.p
+          className="text-xl text-white font-medium"
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {children}
+        </motion.p>
+      </div>
       <motion.div
         transition={{
           type: "spring",
