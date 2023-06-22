@@ -3,11 +3,15 @@ import toast from "react-hot-toast";
 import { ModalHeader } from "./ModalHeader";
 
 export function EmailModal() {
+  const isSmallScreen = false;
+
   toast.custom(
     (t) => (
       <div
         className={classNames(`shadow-xl select-none rounded-md`, [
-          t.visible ? "bottom-0 left-0" : "-bottom-10 -left-10",
+          t.visible
+            ? "top-0 lg:bottom-0 left-0"
+            : "-top-64 lg:-bottom-10 -left-10",
         ])}
       >
         <ModalHeader>E-mail cadastrado com sucesso!</ModalHeader>
