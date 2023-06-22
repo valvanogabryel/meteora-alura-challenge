@@ -1,5 +1,5 @@
 "use client";
-import { FormEvent, useState } from "react";
+import { FormEvent } from "react";
 import { PurpleButton } from "./PurpleButton";
 import { EmailModal } from "./EmailModal";
 import { Toaster } from "react-hot-toast";

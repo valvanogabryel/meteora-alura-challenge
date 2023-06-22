@@ -6,6 +6,7 @@ import { Dispatch, SetStateAction } from "react";
 import { ModalHeader } from "./ModalHeader";
 import Image from "next/image";
 import { PurpleButton } from "./PurpleButton";
+import formatMoney from "@/utils/formatMoney";
 
 interface Props {
   selectedProduct: string;
@@ -56,10 +57,7 @@ export function ProductDetails({ selectedProduct, setSelectedProduct }: Props) {
 
                   <div className="py-6">
                     <span className="text-xl font-medium">
-                      {currentProduct.price.toLocaleString("pt-BR", {
-                        style: "currency",
-                        currency: "BRL",
-                      })}
+                      {formatMoney(currentProduct.price)}
                     </span>
                   </div>
 

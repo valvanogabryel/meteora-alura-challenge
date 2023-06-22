@@ -10,6 +10,7 @@ import { ProductDetails } from "./ProductDetails";
 import { AnimatePresence, motion } from "framer-motion";
 
 import products from "@/hooks/useProducts";
+import formatMoney from "@/utils/formatMoney";
 
 export function Products() {
   const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
@@ -17,9 +18,8 @@ export function Products() {
   return (
     <section className="mt-10">
       <SectionTitle>Produtos que estão bombando!</SectionTitle>
-      {/* cards grid */}
+
       <div className="flex flex-col items-center -mt-2 sm:grid sm:grid-cols-2 sm:justify-items-center lg:grid-cols-3 xl:max-w-[90%] xl:mx-auto 2xl:max-w-[75%]">
-        {/* cards */}
         {products.map((product) => (
           <motion.div
             key={product.id}
@@ -44,10 +44,7 @@ export function Products() {
                 {product.description}
               </motion.p>
               <span className="font-bold mb-3">
-                {product.price.toLocaleString("pt-BR", {
-                  style: "currency",
-                  currency: "BRL",
-                })}
+                {formatMoney(product.price)}
               </span>
               <PurpleButton
                 className="w-[40%] sm:w-[50%] md:w-[35%] lg:w-[50%] xl:w-[35%] 2xl:w-[35%]"
