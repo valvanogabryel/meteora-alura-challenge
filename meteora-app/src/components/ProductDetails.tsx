@@ -42,18 +42,24 @@ export function ProductDetails({ selectedProduct, setSelectedProduct }: Props) {
                 </div>
 
                 <div className="text-meteora-dark px-4">
-                  <motion.div
-                    // animate={{ opacity: 1, y: 0 }}
-                    // transition={{ duration: 0.3 }}
-                    className="border-b border-meteora-dark flex flex-col"
-                  >
-                    <motion.h5 className="font-bold py-6">
+                  <div className="border-b border-meteora-dark flex flex-col">
+                    <motion.h5
+                      className="font-bold py-6"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8 }}
+                    >
                       {currentProduct.name}
                     </motion.h5>
-                    <motion.p className="text-xs+1 w-11/12 pb-6">
+                    <motion.p
+                      className="text-xs+1 w-11/12 pb-6"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.3 }}
+                    >
                       {currentProduct.description}
                     </motion.p>
-                  </motion.div>
+                  </div>
 
                   <div className="py-6">
                     <span className="text-xl font-medium">
