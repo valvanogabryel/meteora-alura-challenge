@@ -5,12 +5,17 @@ import { Products } from "@/components/Products";
 import { Facilities } from "@/components/Facilities";
 import { SignIn } from "@/components/SignIn";
 import { Footer } from "@/components/Footer";
+import Slideshow from "@/components/Slideshow";
 
 export default function Home() {
+  {
+    /* TODO: SLIDER DE BANNER */
+  }
   return (
     <>
       <Header />
       <Banner />
+      {/* <Slideshow /> */}
       <main className="container m-auto">
         <Categories />
         <Products />

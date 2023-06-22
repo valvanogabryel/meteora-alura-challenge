@@ -18,6 +18,15 @@ body {
   @apply bg-meteora-darker-gray rounded-xl hover:bg-meteora-dark-gray;
 }
 
+.carousel {
+  cursor: grab;
+  overflow: hidden;
+}
+
+.carousel .inner {
+  display: flex;
+}
+
 input,
 textarea,
 button,
