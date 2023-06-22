@@ -4,10 +4,15 @@ import { ReactNode } from "react";
 import { AiOutlineCheckCircle as CheckCircle } from "react-icons/ai";
 import { IoMdClose as CloseIcon } from "react-icons/io";
 
-export function ModalHeader({ children }: { children: ReactNode }) {
+interface ModalHeaderProps {
+  onClose: () => void;
+  children: ReactNode;
+}
+
+export function ModalHeader({ children, onClose }: ModalHeaderProps) {
   const iconVariants = {
-    hidden: { opacity: 0, scale: 0 },
-    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0, y: 10 },
+    visible: { opacity: 1, scale: 1, y: 0 },
   };
 
   const textVariants = {
@@ -16,7 +21,7 @@ export function ModalHeader({ children }: { children: ReactNode }) {
   };
 
   return (
-    <header className="bg-black flex items-center px-7 py-1.5 gap-5">
+    <header className="bg-black flex items-center px-7 py-1.5 gap-5 lg:justify-center">
       <motion.div
         transition={{
           type: "spring",
@@ -49,7 +54,10 @@ export function ModalHeader({ children }: { children: ReactNode }) {
         animate="visible"
         whileHover={{ scale: 1.1 }}
       >
-        <CloseIcon className="text-meteora-dark-gray h-6 w-6 cursor-pointer" />
+        <CloseIcon
+          className="text-meteora-dark-gray h-6 w-6 cursor-pointer"
+          onClick={onClose}
+        />
       </motion.div>
     </header>
   );
