@@ -19,8 +19,11 @@ export function ProductDetails({ selectedProduct, setSelectedProduct }: Props) {
 
   if (currentProduct) {
     return (
-      <motion.section layoutId={selectedProduct}>
-        <div className="bg-white z-50">
+      <motion.section
+        layoutId={selectedProduct}
+        className="fixed top-0 left-0 right-0 bottom-0 inset-0 flex items-center justify-center modal-container"
+      >
+        <div className="bg-white z-50 scale-[0.9]">
           <ModalHeader onClose={() => setSelectedProduct(null)}>
             Confira detalhes sobre o produtos
           </ModalHeader>
