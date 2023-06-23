@@ -79,13 +79,10 @@ export function ProductDetails({ selectedProduct, setSelectedProduct }: Props) {
                     </a>
                   </p>
 
-                  {currentProduct.colors && (
-                    <ProductColors colors={currentProduct.colors} />
-                  )}
+                  <ProductColors colors={currentProduct.colors} />
 
-                  {currentProduct.sizes && (
-                    <ProductSizes productSize={currentProduct.sizes} />
-                  )}
+                  <ProductSizes productSize={currentProduct.sizes} />
+
                   <PurpleButton className="">Adicionar à Sacola</PurpleButton>
                 </div>
               </div>
