@@ -8,7 +8,7 @@ export function Navbar() {
     <motion.nav
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="bg-meteora-darker-gray animate-expand absolute right-0 top-0 transition-all duration-300"
+      className="bg-meteora-darker-gray animate-expand absolute right-0 top-0 transition-all duration-300  z-50"
     >
       <ul className="p-8 pb-4">
         <motion.li

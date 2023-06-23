@@ -30,7 +30,7 @@ export default function MenuBurguer() {
   return (
     <div>
       <motion.button
-        className="relative z-50 md:hidden"
+        className="relative z-[9999999] md:hidden"
         onClick={() => setIsOpen(!isOpen)}
         variants={buttonVariants}
         initial="closed"
