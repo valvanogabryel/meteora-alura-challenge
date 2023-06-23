@@ -39,7 +39,7 @@ const swipePower = (offset: number, velocity: number) => {
 };
 
 const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 };
-
+// ! FIXME: ME CONSERTA PF!!!
 export const Slideshow = () => {
   const [[page, direction], setPage] = useState([0, 0]);
 
