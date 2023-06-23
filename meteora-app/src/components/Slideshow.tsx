@@ -1,11 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence, wrap } from "framer-motion";
-
-import imageMobile1 from "@/assets/mobile/Banner carousel 1 _ 375.png";
-import imageMobile2 from "@/assets/mobile/Banner carousel 2 _ 375.png";
-import imageMobile3 from "@/assets/mobile/Banner carousel 3 _ 375.png";
 
 import banners from "@/utils/bannerImagesImports";
 
