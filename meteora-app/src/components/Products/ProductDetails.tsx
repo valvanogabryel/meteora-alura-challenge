@@ -3,10 +3,12 @@
 import products from "@/hooks/useProducts";
 import { motion } from "framer-motion";
 import { Dispatch, SetStateAction } from "react";
-import { ModalHeader } from "./ModalHeader";
 import Image from "next/image";
-import { PurpleButton } from "./PurpleButton";
 import formatMoney from "@/utils/formatMoney";
+import { ModalHeader } from "../ModalHeader";
+import { PurpleButton } from "../PurpleButton";
+import { ProductColors } from "./ProductColors";
+import { ProductSizes } from "./ProductSizes";
 
 interface Props {
   selectedProduct: string;
@@ -77,67 +79,13 @@ export function ProductDetails({ selectedProduct, setSelectedProduct }: Props) {
                     </a>
                   </p>
 
-                  <div className="py-4">
-                    <div>
-                      <h6 className="font-bold text-xs+1 pb-4">Cores:</h6>
-                    </div>
-                    <div className="flex border-b pb-4 gap-4">
-                      <div>
-                        <label className="flex flex-col gap-2 text-xs+1">
-                          <input type="radio" name="color" value="azul-claro" />
-                          Azul claro
-                        </label>
-                      </div>
-                      <div>
-                        <label className="flex flex-col gap-2 text-xs+1">
-                          <input type="radio" name="color" value="offwhite" />
-                          Offwhite
-                        </label>
-                      </div>
-                      <div>
-                        <label className="flex flex-col gap-2 text-xs+1">
-                          <input type="radio" name="color" value="preto" />
-                          Preto
-                        </label>
-                      </div>
-                    </div>
-                  </div>
+                  {currentProduct.colors && (
+                    <ProductColors colors={currentProduct.colors} />
+                  )}
 
-                  <div>
-                    <div>
-                      <h6 className="font-bold text-xs+1 pb-4">Tamanho:</h6>
-                    </div>
-
-                    <div className="flex gap-4 pb-4">
-                      <div>
-                        <label className="flex flex-col gap-2 text-xs+1">
-                          <input type="radio" name="size" value="p" />P
-                        </label>
-                      </div>
-                      <div>
-                        <label className="flex flex-col gap-2 text-xs+1">
-                          <input type="radio" name="size" value="pp" />
-                          PP
-                        </label>
-                      </div>
-                      <div>
-                        <label className="flex flex-col gap-2 text-xs+1">
-                          <input type="radio" name="size" value="m" />M
-                        </label>
-                      </div>
-                      <div>
-                        <label className="flex flex-col gap-2 text-xs+1">
-                          <input type="radio" name="size" value="g" />G
-                        </label>
-                      </div>
-                      <div>
-                        <label className="flex flex-col gap-2 text-xs+1">
-                          <input type="radio" name="size" value="gg" />
-                          GG
-                        </label>
-                      </div>
-                    </div>
-                  </div>
+                  {currentProduct.sizes && (
+                    <ProductSizes productSize={currentProduct.sizes} />
+                  )}
                   <PurpleButton className="">Adicionar à Sacola</PurpleButton>
                 </div>
               </div>

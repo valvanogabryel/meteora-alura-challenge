@@ -6,4 +6,6 @@ export default interface IProduct {
   description: string;
   price: number;
   image: StaticImageData;
+  colors?: string[];
+  sizes?: string[];
 }

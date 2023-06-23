@@ -3,14 +3,14 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import { SectionTitle } from "./SectionTitle";
-import { PurpleButton } from "./PurpleButton";
 import { ProductDetails } from "./ProductDetails";
 
 import { AnimatePresence, motion } from "framer-motion";
 
 import products from "@/hooks/useProducts";
 import formatMoney from "@/utils/formatMoney";
+import { PurpleButton } from "../PurpleButton";
+import { SectionTitle } from "../SectionTitle";
 
 export function Products() {
   const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
@@ -19,7 +19,7 @@ export function Products() {
     <section className="mt-10">
       <SectionTitle>Produtos que estão bombando!</SectionTitle>
 
-      <div className="flex flex-col items-center -mt-2 sm:grid sm:grid-cols-2 sm:justify-items-center lg:grid-cols-3 xl:max-w-[90%] xl:mx-auto 2xl:max-w-[75%]">
+      <div className="flex flex-col items-center -mt-2 sm:grid sm:grid-cols-2 md:w-[95%] md:mx-auto sm:justify-items-center lg:grid-cols-3 xl:max-w-[90%] xl:mx-auto 2xl:max-w-[75%]">
         {products.map((product) => (
           <motion.div
             key={product.id}

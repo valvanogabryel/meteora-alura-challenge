@@ -16,6 +16,8 @@ const products: IProduct[] = [
       "Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.",
     price: 70.0,
     image: tshirtImage,
+    colors: ["Azul", "Marrom", "Preto"],
+    sizes: ["P", "PP", "M", "G", "GG"],
   },
   {
     id: "2",
@@ -24,6 +26,8 @@ const products: IProduct[] = [
       "Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!",
     price: 180.0,
     image: pantsImage,
+    colors: ["Creme", "Marrom", "Preto"],
+    sizes: ["34", "36", "38", "40", "42"],
   },
   {
     id: "3",
@@ -32,6 +36,8 @@ const products: IProduct[] = [
       "Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.",
     price: 250.0,
     image: tennisImage,
+    colors: ["Branco", "Cinza", "Preto"],
+    sizes: ["34", "35", "36", "38", "41"],
   },
   {
     id: "4",
@@ -40,6 +46,8 @@ const products: IProduct[] = [
       "Modelo unissex oversized com gola de camurça. Atemporal e autêntica!",
     price: 150.0,
     image: jacketImage,
+    colors: ["Azul Claro", "Offwhite", "Preto"],
+    sizes: ["P", "PP", "M", "G", "GG"],
   },
   {
     id: "5",
@@ -48,6 +56,8 @@ const products: IProduct[] = [
       "Armação metálica em grafite com lentes arredondadas. Sem erro!",
     price: 120.0,
     image: glassImage,
+    colors: ["Prata", "Dourado", "Cinza Chumbo"],
+    sizes: ["Único"],
   },
   {
     id: "6",
@@ -56,6 +66,7 @@ const products: IProduct[] = [
       "Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!",
     price: 120.0,
     image: purseImage,
+    colors: ["Marrom Claro", "Marrom Escuro", "Preto"],
   },
 ];
 
