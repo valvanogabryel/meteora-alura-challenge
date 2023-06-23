@@ -67,6 +67,7 @@ const products: IProduct[] = [
     price: 120.0,
     image: purseImage,
     colors: ["Marrom Claro", "Marrom Escuro", "Preto"],
+    sizes: ["Único"],
   },
 ];
 

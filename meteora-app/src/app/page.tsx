@@ -1,21 +1,25 @@
 import { Header } from "@/components/Header";
-import { Banner } from "@/components/Banner";
 import { Categories } from "@/components/Categories";
 import { Facilities } from "@/components/Facilities";
 import { SignIn } from "@/components/SignIn";
 import { Footer } from "@/components/Footer";
-import Slideshow from "@/components/Slideshow";
 import { Products } from "@/components/Products/Products";
+import { Slideshow } from "@/components/Slideshow";
+
+import { Banner } from "@/components/Banner";
 
 export default function Home() {
   {
-    /* TODO: SLIDER DE BANNER */
+    /* FIXME: AJUSTAR O CÓDIGO DO SLIDER DO BANNER E DEIXÁ-LO RESPONSIVO*/
   }
+
   return (
     <>
       <Header />
-      <Banner />
-      {/* <Slideshow /> */}
+      {/* <Banner /> */}
+
+      <Slideshow />
+
       <main className="container m-auto">
         <Categories />
         <Products />

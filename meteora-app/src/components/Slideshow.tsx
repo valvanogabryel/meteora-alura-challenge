@@ -1,79 +1,109 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence, wrap } from "framer-motion";
 
-import bannerMobile1 from "@/assets/desktop/Banner carousel 1 _ 375.png";
-import bannerMobile2 from "@/assets/mobile/Banner carousel 2 _ 375.png";
-import bannerMobile3 from "@/assets/mobile/Banner carousel 3 _ 375.png";
+import imageMobile1 from "@/assets/mobile/Banner carousel 1 _ 375.png";
+import imageMobile2 from "@/assets/mobile/Banner carousel 2 _ 375.png";
+import imageMobile3 from "@/assets/mobile/Banner carousel 3 _ 375.png";
 
-const banners = [
-  {
-    id: 1,
-    image: bannerMobile1,
-    title: "",
-    content: "",
+import banners from "@/utils/bannerImagesImports";
+
+import { useBreakpoint } from "use-breakpoint";
+
+import {
+  AiOutlineCaretRight as ArrowRight,
+  AiOutlineCaretLeft as ArrowLeft,
+} from "react-icons/ai";
+
+const variants = {
+  enter: (direction: number) => {
+    return {
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0,
+    };
   },
-  {
-    id: 2,
-    image: bannerMobile2,
-    title: "Coleção Atemporal",
-    content: "Estilo e qualidade para durar.",
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1,
   },
-  {
-    id: 3,
-    image: bannerMobile3,
-    title: "Coleção Atemporal",
-    content: "Alto impacto visual, baixo impacto ambiental.",
+  exit: (direction: number) => {
+    return {
+      zIndex: 0,
+      x: direction < 0 ? 1000 : -1000,
+      opacity: 0,
+    };
   },
-];
+};
 
-const Slidershow = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset: number, velocity: number) => {
+  return Math.abs(offset) * velocity;
+};
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? banners.length - 1 : prevIndex - 1
-    );
-  };
+const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 };
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === banners.length - 1 ? 0 : prevIndex + 1
-    );
+export const Slideshow = () => {
+  const [[page, direction], setPage] = useState([0, 0]);
+
+  const { breakpoint } = useBreakpoint(BREAKPOINTS);
+  let images;
+
+  if (breakpoint?.match("mobile")) {
+    images = [banners.mobile[0], banners.mobile[1], banners.mobile[2]];
+  } else if (breakpoint?.match("tablet")) {
+    images = [banners.tablet[0], banners.tablet[1], banners.tablet[2]];
+  } else {
+    images = [banners.desktop[0], banners.desktop[1], banners.desktop[2]];
+  }
+
+  const imageIndex = wrap(0, images.length, page);
+  const backgrounds = ["#895FB5", "#F58D90", "#F87F46"];
+
+  const paginate = (newDirection: number) => {
+    setPage([page + newDirection, newDirection]);
   };
 
   return (
-    <div className="slider-container">
-      <motion.div
-        className="slider flex -z-50 relative"
-        style={{
-          width: `${banners.length}00vw`,
-          transform: `translateX(-${currentIndex}00%)`,
-        }}
-      >
-        {banners.map((banner) => (
-          <div className="banner w-full flex-shrink-0" key={banner.id}>
-            <Image src={banner.image} alt="" width={375} height={375} />
-          </div>
-        ))}
-      </motion.div>
+    <div
+      className="caroussel-container"
+      style={{ backgroundColor: backgrounds[imageIndex] }}
+    >
+      <AnimatePresence initial={false} custom={direction}>
+        <motion.img
+          className="absolute max-w-full"
+          key={page}
+          src={images[imageIndex]}
+          custom={direction}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{
+            x: { type: "spring", stiffness: 300, damping: 30 },
+            opacity: { duration: 0.2 },
+          }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={1}
+          onDragEnd={(e, { offset, velocity }) => {
+            const swipe = swipePower(offset.x, velocity.x);
 
-      <button
-        className="prev-button bg-gray-200 p-2 rounded-full"
-        onClick={handlePrev}
-      >
-        {"<"}
-      </button>
-      <button
-        className="next-button bg-gray-200 p-2 rounded-full"
-        onClick={handleNext}
-      >
-        {">"}
-      </button>
+            if (swipe < -swipeConfidenceThreshold) {
+              paginate(1);
+            } else if (swipe > swipeConfidenceThreshold) {
+              paginate(-1);
+            }
+          }}
+        />
+      </AnimatePresence>
+      <div className="next" onClick={() => paginate(1)}>
+        <ArrowRight />
+      </div>
+      <div className="prev" onClick={() => paginate(-1)}>
+        <ArrowLeft />
+      </div>
     </div>
   );
 };
-
-export default Slidershow;

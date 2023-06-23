@@ -9,39 +9,16 @@ export function ProductSizes({ productSize }: { productSize: string[] }) {
         {productSize.map((size) => (
           <div key={size}>
             <label className="flex flex-col gap-2 text-xs+1">
-              <input type="radio" name="size" value={size} />
+              <input
+                type="radio"
+                name="size"
+                value={size}
+                checked={productSize.length === 1}
+              />
               {size}
             </label>
           </div>
         ))}
-
-        {/* <div>
-          <label className="flex flex-col gap-2 text-xs+1">
-            <input type="radio" name="size" value="p" />P
-          </label>
-        </div>
-        <div>
-          <label className="flex flex-col gap-2 text-xs+1">
-            <input type="radio" name="size" value="pp" />
-            PP
-          </label>
-        </div>
-        <div>
-          <label className="flex flex-col gap-2 text-xs+1">
-            <input type="radio" name="size" value="m" />M
-          </label>
-        </div>
-        <div>
-          <label className="flex flex-col gap-2 text-xs+1">
-            <input type="radio" name="size" value="g" />G
-          </label>
-        </div>
-        <div>
-          <label className="flex flex-col gap-2 text-xs+1">
-            <input type="radio" name="size" value="gg" />
-            GG
-          </label>
-        </div> */}
       </div>
     </div>
   );

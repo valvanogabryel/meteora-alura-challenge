@@ -18,13 +18,41 @@ body {
   @apply bg-meteora-darker-gray rounded-xl hover:bg-meteora-dark-gray;
 }
 
-.carousel {
+.caroussel-container {
+  display: flex;
+  height: 51vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   cursor: grab;
-  overflow: hidden;
 }
 
-.carousel .inner {
+.next,
+.prev {
+  top: calc(50% - 20px);
+  position: absolute;
+  background: transparent;
+  color: white;
+  width: 40px;
+  height: 40px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+  transform: scale(1.6);
+}
+
+.next {
+  right: 30px;
+}
+
+.prev {
+  left: 30px;
 }
 
 input,

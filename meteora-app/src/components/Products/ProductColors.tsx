@@ -8,7 +8,12 @@ export function ProductColors({ colors }: { colors: string[] }) {
         {colors.map((color) => (
           <div key={color}>
             <label className="flex flex-col gap-2 text-xs+1">
-              <input type="radio" name="color" value={color} />
+              <input
+                type="radio"
+                name="color"
+                value={color}
+                checked={colors.length === 1}
+              />
               {color}
             </label>
           </div>
