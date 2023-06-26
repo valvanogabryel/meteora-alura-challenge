@@ -16,7 +16,7 @@ const Slider = () => {
 
   useEffect(() => {
     getImageSrc();
-  }, []);
+  }, [isDesktop, isMobile, isTablet]);
 
   const getImageSrc = () => {
     if (isMobile) {
