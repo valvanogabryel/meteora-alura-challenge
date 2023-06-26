@@ -68,7 +68,7 @@ const Slider = () => {
         },
       }}
       effect={"creative"}
-      className="md:max-h-[25rem] xl:max-h-[30rem]"
+      className="md:max-h-[25rem] xl:max-h-[30rem] 2xl:max-h-[35rem]"
     >
       {images.map((image: any) => (
         <SwiperSlide key={image}>
