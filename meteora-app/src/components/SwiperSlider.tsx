@@ -22,7 +22,7 @@ const Slider = () => {
   const isTablet = useMediaQuery({ minWidth: 641, maxWidth: 1024 });
   const isDesktop = useMediaQuery({ minWidth: 1025 });
 
-  const [images, setImages] = useState<any>([]);
+  const [images, setImages] = useState<string[]>([]);
 
   useEffect(() => {
     getImageSrc();
