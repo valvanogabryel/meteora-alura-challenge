@@ -84,10 +84,10 @@ const Slider = () => {
         </SwiperSlide>
       ))}
       <div className="swiper-button-prev after:hidden">
-        <ArrowLeft className="text-white relative left-7 scale-[2]" />
+        <ArrowLeft className="text-white relative left-7 scale-[2] hover:scale-[2.2]" />
       </div>
       <div className="swiper-button-next after:hidden">
-        <ArrowRight className="text-white relative right-7 scale-[2]" />
+        <ArrowRight className="text-white relative right-7 scale-[2] hover:scale-[2.2]" />
       </div>
       <div className="swiper-pagination" />
     </Swiper>
