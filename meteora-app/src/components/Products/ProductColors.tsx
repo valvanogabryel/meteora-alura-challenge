@@ -1,6 +1,6 @@
 export function ProductColors({ colors }: { colors: string[] }) {
   return (
-    <div className="py-4">
+    <div className="py-4 select-none">
       <div>
         <h6 className="font-bold text-xs+1 pb-4">Cores:</h6>
       </div>
@@ -8,12 +8,7 @@ export function ProductColors({ colors }: { colors: string[] }) {
         {colors.map((color) => (
           <div key={color}>
             <label className="flex flex-col gap-2 text-xs+1">
-              <input
-                type="radio"
-                name="color"
-                value={color}
-                checked={colors.length === 1}
-              />
+              <input type="radio" name="color" value={color} />
               {color}
             </label>
           </div>

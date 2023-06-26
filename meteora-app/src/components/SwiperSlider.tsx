@@ -12,10 +12,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import {
-  AiOutlineCaretRight as ArrowRight,
-  AiOutlineCaretLeft as ArrowLeft,
-} from "react-icons/ai";
+// import {
+//   AiOutlineCaretRight as ArrowRight,
+//   AiOutlineCaretLeft as ArrowLeft,
+// } from "react-icons/ai";
 
 const Slider = () => {
   const isMobile = useMediaQuery({ maxWidth: 640 });
