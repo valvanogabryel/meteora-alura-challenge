@@ -46,7 +46,7 @@ const Slider = () => {
       centeredSlides={true}
       navigation={true}
       loop={true}
-      pagination={{ clickable: true }}
+      pagination={{ dynamicBullets: true, clickable: true }}
       autoplay={{
         delay: 3000,
         pauseOnMouseEnter: true,
@@ -62,9 +62,9 @@ const Slider = () => {
         },
       }}
       effect={"creative"}
-      className="lg:h-full"
+      // className="lg:h-full"
     >
-      {images?.map((image: any) => (
+      {images.map((image: any) => (
         <SwiperSlide key={image}>
           <Image
             src={image}
