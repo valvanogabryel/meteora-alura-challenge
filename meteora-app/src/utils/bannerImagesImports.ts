@@ -8,8 +8,8 @@ import bannerTablet2 from "@/assets/tablet/Banner carousel 2 _ 768.png";
 import bannerTablet3 from "@/assets/tablet/Banner carousel 3 _ 768.png";
 // desktop
 import bannerDesktop1 from "@/assets/desktop/Banner carousel 1 _ 1440 (1).png";
-import bannerDesktop2 from "@/assets/desktop/Banner carousel 2 _ 1440 (1).png";
-import bannerDesktop3 from "@/assets/desktop/Banner carousel 3 _ 1440 (1).png";
+import bannerDesktop2 from "@/assets/desktop/Banner carousel 2 _ 1440.png";
+import bannerDesktop3 from "@/assets/desktop/Banner carousel 3 _ 1440.png";
 
 const banners = {
   mobile: [bannerMobile1.src, bannerMobile2.src, bannerMobile3.src],
