@@ -12,10 +12,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// import {
-//   AiOutlineCaretRight as ArrowRight,
-//   AiOutlineCaretLeft as ArrowLeft,
-// } from "react-icons/ai";
+import {
+  AiOutlineCaretRight as ArrowRight,
+  AiOutlineCaretLeft as ArrowLeft,
+} from "react-icons/ai";
 
 const Slider = () => {
   const isMobile = useMediaQuery({ maxWidth: 640 });
@@ -44,9 +44,16 @@ const Slider = () => {
       grabCursor={true}
       slidesPerView={1}
       centeredSlides={true}
-      navigation={true}
+      navigation={{
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+      }}
       loop={true}
-      pagination={{ dynamicBullets: true, clickable: true }}
+      pagination={{
+        dynamicBullets: true,
+        clickable: true,
+        el: ".swiper-pagination",
+      }}
       autoplay={{
         delay: 3000,
         pauseOnMouseEnter: true,
@@ -77,6 +84,13 @@ const Slider = () => {
           />
         </SwiperSlide>
       ))}
+      <div className="swiper-button-prev after:hidden">
+        <ArrowLeft className="text-white relative left-7 scale-[2]" />
+      </div>
+      <div className="swiper-button-next after:hidden">
+        <ArrowRight className="text-white relative right-7 scale-[2]" />
+      </div>
+      <div className="swiper-pagination" />
     </Swiper>
   );
 };
