@@ -7,6 +7,7 @@ import { Products } from "@/components/Products/Products";
 import { Slideshow } from "@/components/Slideshow";
 
 import { Banner } from "@/components/Banner";
+import SwiperSlider from "@/components/SwiperSlider";
 
 export default function Home() {
   {
@@ -18,7 +19,8 @@ export default function Home() {
       <Header />
       {/* <Banner /> */}
 
-      <Slideshow />
+      {/* <Slideshow /> */}
+      <SwiperSlider />
 
       <main className="container m-auto">
         <Categories />

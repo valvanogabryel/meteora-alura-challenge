@@ -5,7 +5,7 @@ import { motion, AnimatePresence, wrap } from "framer-motion";
 
 import banners from "@/utils/bannerImagesImports";
 
-import { useBreakpoint } from "use-breakpoint";
+import { useMediaQuery } from "react-responsive";
 
 import {
   AiOutlineCaretRight as ArrowRight,
@@ -38,21 +38,8 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
 
-const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 };
-// ! FIXME: ME CONSERTA PF!!!
 export const Slideshow = () => {
   const [[page, direction], setPage] = useState([0, 0]);
-
-  const { breakpoint } = useBreakpoint(BREAKPOINTS);
-  let images;
-
-  if (breakpoint?.match("mobile")) {
-    images = [banners.mobile[0], banners.mobile[1], banners.mobile[2]];
-  } else if (breakpoint?.match("tablet")) {
-    images = [banners.tablet[0], banners.tablet[1], banners.tablet[2]];
-  } else {
-    images = [banners.desktop[0], banners.desktop[1], banners.desktop[2]];
-  }
 
   const imageIndex = wrap(0, images.length, page);
   const backgrounds = ["#895FB5", "#F58D90", "#F87F46"];
@@ -70,7 +57,9 @@ export const Slideshow = () => {
         <motion.img
           className="absolute max-w-full"
           key={page}
-          src={images[imageIndex]}
+          // src={images[imageIndex]}
+          sizes="100vw"
+          // srcSet="/src/assets/mobile/Banner carousel 1 _ 375.png 640w,"
           custom={direction}
           variants={variants}
           initial="enter"
