@@ -6,7 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import banners from "@/utils/bannerImagesImports";
 import { useEffect, useState } from "react";
 
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination, Navigation, EffectCreative } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -41,16 +41,27 @@ const Slider = () => {
   return (
     <Swiper
       spaceBetween={0}
+      grabCursor={true}
       slidesPerView={1}
       centeredSlides={true}
       navigation={true}
+      loop={true}
       pagination={{ clickable: true }}
       autoplay={{
         delay: 3000,
-        disableOnInteraction: true,
+        pauseOnMouseEnter: true,
       }}
-      modules={[Autoplay, Pagination, Navigation]}
-      effect="fade"
+      modules={[Autoplay, Pagination, Navigation, EffectCreative]}
+      creativeEffect={{
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      }}
+      effect={"creative"}
       className="lg:h-full"
     >
       {images?.map((image: any) => (
@@ -62,7 +73,7 @@ const Slider = () => {
             height={800}
             sizes="100vw"
             quality={100}
-            className="select-none cursor-grab md:-mt-[1px] lg:-mt-1 w-screen active:cursor-grabbing"
+            className="select-none md:-mt-[1px] lg:-mt-1 w-screen"
           />
         </SwiperSlide>
       ))}
