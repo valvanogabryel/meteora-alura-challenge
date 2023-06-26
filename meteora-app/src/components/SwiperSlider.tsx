@@ -50,7 +50,6 @@ const Slider = () => {
       }}
       loop={true}
       pagination={{
-        dynamicBullets: true,
         clickable: true,
         el: ".swiper-pagination",
       }}
