@@ -55,7 +55,6 @@ const Slider = () => {
       }}
       autoplay={{
         delay: 3000,
-        pauseOnMouseEnter: true,
       }}
       modules={[Autoplay, Pagination, Navigation, EffectCreative]}
       creativeEffect={{
