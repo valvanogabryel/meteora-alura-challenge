@@ -18,6 +18,19 @@ body {
   @apply bg-meteora-darker-gray rounded-xl hover:bg-meteora-dark-gray;
 }
 
+.swiper-pagination {
+}
+
+.swiper-pagination span {
+  @apply bg-white;
+}
+
+.swiper-pagination-bullet {
+  width: 32px !important;
+  height: 3px !important;
+  border-radius: 0 !important;
+}
+
 input,
 textarea,
 button,
