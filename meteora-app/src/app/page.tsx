@@ -9,10 +9,6 @@ import { Footer } from "@/components/Footer";
 // import { Banner } from "@/components/Banner";
 
 export default function Home() {
-  {
-    /* FIXME: AJUSTAR O CÓDIGO DO SLIDER DO BANNER*/
-  }
-
   return (
     <>
       <Header />
