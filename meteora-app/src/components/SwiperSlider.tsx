@@ -5,23 +5,28 @@ import "swiper/css";
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 import banners from "@/utils/bannerImagesImports";
+import { useEffect, useState } from "react";
 
 const Slider = () => {
   const isMobile = useMediaQuery({ maxWidth: 640 });
   const isTablet = useMediaQuery({ minWidth: 641, maxWidth: 1024 });
   const isDesktop = useMediaQuery({ minWidth: 1025 });
 
+  const [images, setImages] = useState<any>([]);
+
+  useEffect(() => {
+    getImageSrc();
+  }, []);
+
   const getImageSrc = () => {
     if (isMobile) {
-      return banners.mobile;
+      setImages(banners.mobile);
     } else if (isTablet) {
-      return banners.tablet;
+      setImages(banners.tablet);
     } else if (isDesktop) {
-      return banners.desktop;
+      setImages(banners.desktop);
     }
   };
-
-  const images = getImageSrc();
 
   return (
     <Swiper
@@ -29,9 +34,10 @@ const Slider = () => {
       slidesPerView={1}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
+      className="lg:h-full"
     >
-      {images?.map((image) => (
-        <SwiperSlide key={image} className="lg:h-[346px]">
+      {images?.map((image: any) => (
+        <SwiperSlide key={image}>
           <Image
             src={image}
             alt="Banner"
@@ -39,6 +45,7 @@ const Slider = () => {
             height={800}
             sizes="100vw"
             quality={100}
+            className="md:-mt-[1px] lg:-mt-1 w-screen"
           />
         </SwiperSlide>
       ))}
