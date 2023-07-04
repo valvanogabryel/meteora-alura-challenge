@@ -35,7 +35,7 @@ export function ProductDetails({
     return (
       <motion.section
         layoutId={selectedProduct}
-        className="fixed top-0 bottom-0 left-0 right-0 inset-0 flex items-center justify-center  backdrop-blur-sm"
+        className="fixed top-0 bottom-0 left-0 right-0 inset-0 flex items-center justify-center  backdrop-blur-sm z-50"
       >
         <div className="bg-white shadow-xl max-h-[51rem] overflow-auto scale-90 md:scale-100 rounded-sm">
           <ModalHeader onClose={() => setSelectedProduct(null)}>
