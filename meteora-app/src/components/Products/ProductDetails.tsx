@@ -1,14 +1,18 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Dispatch, SetStateAction } from "react";
 import Image from "next/image";
-import formatMoney from "@/utils/formatMoney";
+
 import { ModalHeader } from "../ModalHeader";
 import { PurpleButton } from "../PurpleButton";
 import { ProductColors } from "./ProductColors";
 import { ProductSizes } from "./ProductSizes";
+
 import IProduct from "@/types/IProduct";
+
+import { motion } from "framer-motion";
+
+import formatMoney from "@/utils/formatMoney";
 
 interface Props {
   products: IProduct[];
