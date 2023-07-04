@@ -30,8 +30,6 @@ export function Products() {
     search.toString()
   );
 
-  console.log(displayedProducts.length === 0);
-
   return (
     <section className="mt-10">
       <SectionTitle>
@@ -46,6 +44,11 @@ export function Products() {
             key={product.id}
             layoutId={product.id}
             className="m-8 border max-w-xs md:w-11/12 md:max-w-none lg:w-4/5 xl:w-[93%]"
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 30,
+            }}
           >
             <motion.div>
               <Image
