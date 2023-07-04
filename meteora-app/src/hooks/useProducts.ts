@@ -18,6 +18,7 @@ const products: IProduct[] = [
     image: tshirtImage,
     colors: ["Azul", "Marrom", "Preto"],
     sizes: ["P", "PP", "M", "G", "GG"],
+    category: "Camisetas",
   },
   {
     id: "2",
@@ -28,6 +29,7 @@ const products: IProduct[] = [
     image: pantsImage,
     colors: ["Creme", "Marrom", "Preto"],
     sizes: ["34", "36", "38", "40", "42"],
+    category: "Calças",
   },
   {
     id: "3",
@@ -38,6 +40,7 @@ const products: IProduct[] = [
     image: tennisImage,
     colors: ["Branco", "Cinza", "Preto"],
     sizes: ["34", "35", "36", "38", "41"],
+    category: "Calçados",
   },
   {
     id: "4",
@@ -48,6 +51,7 @@ const products: IProduct[] = [
     image: jacketImage,
     colors: ["Azul Claro", "Offwhite", "Preto"],
     sizes: ["P", "PP", "M", "G", "GG"],
+    category: "Casacos",
   },
   {
     id: "5",
@@ -58,6 +62,7 @@ const products: IProduct[] = [
     image: glassImage,
     colors: ["Prata", "Dourado", "Cinza Chumbo"],
     sizes: ["Único"],
+    category: "Óculos",
   },
   {
     id: "6",
@@ -68,6 +73,7 @@ const products: IProduct[] = [
     image: purseImage,
     colors: ["Marrom Claro", "Marrom Escuro", "Preto"],
     sizes: ["Único"],
+    category: "Bolsas",
   },
 ];
 

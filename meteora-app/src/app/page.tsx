@@ -5,6 +5,7 @@ import { Facilities } from "@/components/Facilities";
 import { SignIn } from "@/components/SignIn";
 import { Products } from "@/components/Products/Products";
 import { Footer } from "@/components/Footer";
+import { CategoryProvider } from "@/context/CategoryContext";
 
 export default function Home() {
   return (
@@ -14,8 +15,10 @@ export default function Home() {
       <SwiperSlider />
 
       <main className="container m-auto">
-        <Categories />
-        <Products />
+        <CategoryProvider>
+          <Categories />
+          <Products />
+        </CategoryProvider>
       </main>
       <Facilities />
       <SignIn />

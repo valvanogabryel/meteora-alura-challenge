@@ -8,4 +8,5 @@ export default interface IProduct {
   image: StaticImageData;
   colors: string[];
   sizes: string[];
+  category: string | string[];
 }
