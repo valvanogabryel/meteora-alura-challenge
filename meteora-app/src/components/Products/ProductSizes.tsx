@@ -1,8 +1,6 @@
 export function ProductSizes({ productSize }: { productSize: string[] }) {
   const isOnlySize = productSize.length === 1 && productSize[0] === "Único";
 
-  console.log(isOnlySize);
-
   return (
     <div>
       <div>
@@ -14,7 +12,7 @@ export function ProductSizes({ productSize }: { productSize: string[] }) {
           isOnlySize ? (
             <div key={size}>
               <label className="flex flex-col gap-2 text-xs+1">
-                <input type="radio" name="size" value={size} checked />
+                <input type="radio" name="size" value={size} checked readOnly />
                 {size}
               </label>
             </div>

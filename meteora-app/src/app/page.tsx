@@ -6,8 +6,6 @@ import { SignIn } from "@/components/SignIn";
 import { Products } from "@/components/Products/Products";
 import { Footer } from "@/components/Footer";
 
-// import { Banner } from "@/components/Banner";
-
 export default function Home() {
   return (
     <>

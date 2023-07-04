@@ -1,6 +1,5 @@
 "use client";
 
-import products from "@/hooks/useProducts";
 import { motion } from "framer-motion";
 import { Dispatch, SetStateAction } from "react";
 import Image from "next/image";
@@ -9,13 +8,19 @@ import { ModalHeader } from "../ModalHeader";
 import { PurpleButton } from "../PurpleButton";
 import { ProductColors } from "./ProductColors";
 import { ProductSizes } from "./ProductSizes";
+import IProduct from "@/types/IProduct";
 
 interface Props {
+  products: IProduct[];
   selectedProduct: string;
   setSelectedProduct: Dispatch<SetStateAction<string | null>>;
 }
 
-export function ProductDetails({ selectedProduct, setSelectedProduct }: Props) {
+export function ProductDetails({
+  products,
+  selectedProduct,
+  setSelectedProduct,
+}: Props) {
   const currentProduct = products.find(
     (product) => product.id === selectedProduct
   );
@@ -39,6 +44,8 @@ export function ProductDetails({ selectedProduct, setSelectedProduct }: Props) {
                   <Image
                     src={currentProduct.image}
                     alt=""
+                    width={300}
+                    height={300}
                     className="w-full object-cover md:w-auto md:min-h-[28rem]"
                   />
                 </div>

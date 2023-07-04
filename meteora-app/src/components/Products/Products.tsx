@@ -4,16 +4,17 @@ import { useState } from "react";
 import Image from "next/image";
 
 import { ProductDetails } from "./ProductDetails";
-
-import { AnimatePresence, motion } from "framer-motion";
-
-import products from "@/hooks/useProducts";
-import formatMoney from "@/utils/formatMoney";
 import { PurpleButton } from "../PurpleButton";
 import { SectionTitle } from "../SectionTitle";
 
+import useProducts from "@/hooks/useProducts";
+import { AnimatePresence, motion } from "framer-motion";
+import formatMoney from "@/utils/formatMoney";
+
 export function Products() {
   const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
+
+  const products = useProducts();
 
   return (
     <section className="mt-10">
@@ -59,6 +60,7 @@ export function Products() {
         <AnimatePresence>
           {selectedProduct && (
             <ProductDetails
+              products={products}
               selectedProduct={selectedProduct}
               setSelectedProduct={setSelectedProduct}
             />
