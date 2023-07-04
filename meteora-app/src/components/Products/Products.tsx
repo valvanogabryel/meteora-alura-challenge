@@ -7,17 +7,15 @@ import { ProductDetails } from "./ProductDetails";
 import { PurpleButton } from "../PurpleButton";
 import { SectionTitle } from "../SectionTitle";
 
-import useProducts from "@/hooks/useProducts";
+import products from "@/hooks/useProducts";
+
 import { AnimatePresence, motion } from "framer-motion";
 import formatMoney from "@/utils/formatMoney";
 
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
+
 
 export function Products() {
   const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
-
-  const products = useProducts();
 
   return (
     <section className="mt-10">

@@ -31,7 +31,7 @@ export function SignIn() {
             id="iemail"
             placeholder="Digite seu email"
             required
-            min={3}
+            minLength={8}
             className="text-meteora-dark-gray border focus:outline-none border-black pl-4 py-2 col-span-7 md:col-span-9"
           />
           <PurpleButton className="md:col-span-2">Enviar</PurpleButton>
