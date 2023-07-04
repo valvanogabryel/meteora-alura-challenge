@@ -52,7 +52,7 @@ export function CategoryCard({
       </button>
       {isCurrentCategory && (
         <motion.button
-          className="absolute -top-4 transition-all -right-4 bg-white p-2 rounded-full border border-meteora-light-purple
+          className="absolute -top-4 transition-all -right-4 bg-white p-2 rounded-full ring-1 ring-meteora-light-purple
           "
           onClick={() => setSelectedCategory(null)}
           variants={closeButtonVariants}
