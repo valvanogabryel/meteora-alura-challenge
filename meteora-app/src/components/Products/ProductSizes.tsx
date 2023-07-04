@@ -1,4 +1,8 @@
 export function ProductSizes({ productSize }: { productSize: string[] }) {
+  const isOnlySize = productSize.length === 1 && productSize[0] === "Único";
+
+  console.log(isOnlySize);
+
   return (
     <div>
       <div>
@@ -6,14 +10,23 @@ export function ProductSizes({ productSize }: { productSize: string[] }) {
       </div>
 
       <div className="flex gap-4 pb-4 select-none">
-        {productSize.map((size) => (
-          <div key={size}>
-            <label className="flex flex-col gap-2 text-xs+1">
-              <input type="radio" name="size" value={size} />
-              {size}
-            </label>
-          </div>
-        ))}
+        {productSize.map((size) =>
+          isOnlySize ? (
+            <div key={size}>
+              <label className="flex flex-col gap-2 text-xs+1">
+                <input type="radio" name="size" value={size} checked />
+                {size}
+              </label>
+            </div>
+          ) : (
+            <div key={size}>
+              <label className="flex flex-col gap-2 text-xs+1">
+                <input type="radio" name="size" value={size} />
+                {size}
+              </label>
+            </div>
+          )
+        )}
       </div>
     </div>
   );
