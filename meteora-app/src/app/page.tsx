@@ -1,12 +1,12 @@
 import { Header } from "@/components/Header";
 import SwiperSlider from "@/components/SwiperSlider";
 import { Categories } from "@/components/Categories";
-import { Facilities } from "@/components/Facilities";
+import { Ease } from "@/components/Ease";
 import { SignIn } from "@/components/SignIn";
 import { Products } from "@/components/Products/Products";
 import { Footer } from "@/components/Footer";
 import { CategoryProvider } from "@/context/CategoryContext";
-import useSearch, { SearchProvider } from "@/context/SearchContext";
+import { SearchProvider } from "@/context/SearchContext";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
           </CategoryProvider>
         </main>
       </SearchProvider>
-      <Facilities />
+      <Ease />
       <SignIn />
       <Footer />
     </>
