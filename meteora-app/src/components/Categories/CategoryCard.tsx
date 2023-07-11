@@ -25,7 +25,7 @@ export function CategoryCard({
   };
 
   return (
-    <div
+    <li
       className={`relative group cursor-pointer -mt-3 md:-mt-2 lg:mt-0 transition-all hover:scale-105 hover:shadow-2xl ${
         isCurrentCategory &&
         "scale-105 shadow-xl ring-2 ring-meteora-light-purple"
@@ -67,6 +67,6 @@ export function CategoryCard({
           <X />
         </motion.button>
       )}
-    </div>
+    </li>
   );
 }
